@@ -1,0 +1,131 @@
+code {
+  padding: 0 0.25rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.875rem;
+  background: var(--color-primary-090);
+  border-radius: 0.125rem;
+  user-select: all;
+}
+pre[data-lang] {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  margin: 1rem 0;
+  white-space: pre;
+  tab-size: 2;
+  overflow: hidden;
+  scrollbar-width: thin;
+  background: var(--color-primary-095);
+  border-radius: 0.25rem;
+}
+pre[data-lang] + pre[data-lang] {
+  margin: 1.25rem 0 1rem;
+}
+pre[data-lang] code {
+  flex: 1 0 100%;
+  display: block;
+  padding: 1rem 1rem 0.875rem;
+  background: none;
+  overflow: scroll auto;
+  user-select: auto;
+}
+pre[data-lang] span[role] {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color-primary-050);
+  background: var(--color-neutral-100-50);
+  border-radius: 0 0.25rem 0 0.25rem;
+  backdrop-filter: blur(0.5rem);
+  transition: 0.2s ease-in-out;
+  transition-property: background, color;
+  cursor: pointer;
+}
+pre[data-lang] span[role]::before,
+pre[data-lang] span[role]::after {
+  content: "\F290";
+  position: absolute;
+  bottom: 0.125rem;
+  color: var(--color-neutral-020);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+pre[data-lang] span[role]::after {
+  content: "\F28B";
+}
+pre[data-lang] span[role]:hover,
+pre[data-lang].copied span[role] {
+  color: transparent;
+}
+pre[data-lang] span[role]:hover::before,
+pre[data-lang].copied span[role]::after {
+  opacity: 1;
+}
+pre[data-lang].copied span[role]::before {
+  opacity: 0;
+}
+
+.namespace {
+  opacity: 0.75;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--code-theme-comment);
+}
+.token.punctuation {
+  color: var(--code-theme-punctuation);
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--code-theme-tag);
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--code-theme-selector);
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: var(--code-theme-operator);
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: var(--code-theme-keyword);
+}
+.token.function {
+  color: var(--code-theme-function);
+}
+.token.regex,
+.token.important,
+.token.variable {
+  color: var(--code-theme-variable);
+}
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+.token.entity {
+  cursor: help;
+}

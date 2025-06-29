@@ -1,0 +1,296 @@
+
+main {
+  display: flex;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 1rem;
+  max-width: 100rem;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  padding: .5rem 0;
+  background: var(--color-neutral-100);
+  box-shadow: 0 0 .5rem var(--color-primary-090);
+  z-index: 1;
+}
+.header .wrapper {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  transition: height .2s ease-in-out;
+}
+.header .site-logo {
+  max-width: 2.8rem;
+  transition: max-width .2s ease-in-out;
+}
+.header .site-name {
+  flex: 1 0 auto;
+  margin: 0 1rem;
+}
+.header .site-author {
+  flex: 0 0 var(--r-width);
+  width: var(--r-width);
+  font-weight: 500;
+  color: var(--color-primary-060);
+}
+
+.content {
+  flex: 1 1 auto;
+  padding: 2rem 1rem 10rem;
+}
+.markdown-section {
+  margin: 0 auto;
+  max-width: 45rem;
+}
+
+.app-name, .sidebar-toggle {
+  display: none;
+}
+
+.sidebar {
+  flex: 1 1 var(--l-width);
+  position: sticky;
+  top: 4rem;
+  padding: 1rem 2rem 10rem 0;
+  max-width: 17.5rem;
+  min-width: var(--l-width);
+  height: calc(100vh - 4rem);
+  overflow: auto scroll;
+  scrollbar-width: thin;
+  transition: .2s ease-in-out;
+  z-index: 9;
+}
+
+.sidebar-nav {
+  max-height: 100rem;
+  overflow: hidden;
+  transition: max-height .2s ease-in-out;
+}
+.sidebar-nav ul {
+  margin: 0;
+  overflow: hidden;
+  transition: max-height .2s ease-in-out;
+}
+.sidebar-nav > ul > li > span {
+  display: inline-block;
+  margin: 1rem 0 .25rem;
+  padding: .25rem .75rem;
+  font-size: .75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--color-primary-050);
+}
+.sidebar-nav a {
+  display: block;
+  margin: 0 0 .25rem;
+  padding: .25rem .75rem;
+  color: inherit;
+  border-radius: .25rem;
+}
+.sidebar-nav a:hover {
+  background: var(--color-primary-080);
+}
+.sidebar-nav .active > a {
+  pointer-events: none;
+}
+.sidebar-nav li[class] > a {
+  background: var(--color-primary-090);
+}
+.sidebar-nav a[rel=home] {
+  display: inline-block;
+  margin: 0 0 1rem;
+}
+.sidebar-nav a[rel=home]::before {
+  content: "\F424";
+}
+.sidebar-nav a[rel=home]:hover, .sidebar-nav .active > a[rel=home] {
+  color: var(--color-primary-060);
+  background: none;
+}
+
+.search {
+  margin: 2.75rem 0 1rem;
+}
+.search .input-wrap {
+  display: flex;
+  align-items: center;
+  background: var(--color-primary-095);
+  border-radius: .25rem;
+  transition: background .2s ease-in-out;
+}
+.search .input-wrap:focus-within {
+  background: var(--color-primary-090);
+}
+.search input {
+  flex: 1 1 auto;
+  width: 100%;
+  color: var(--color-primary-050);
+  background: transparent;
+}
+.search input::-webkit-search-decoration, .search input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.search .clear-button {
+  flex: 0 0 2.25rem;
+  align-self: stretch;
+  padding: 0 .625rem;
+  border-radius: 0 .125rem .125rem 0;
+  transition: background .2s ease-in-out;
+}
+.search .clear-button svg {
+  display: none;
+}
+.search .clear-button::before, .search .clear-button::after {
+  content: "\F52A";
+  position: absolute;
+  margin: 1px 0 -1px;
+  line-height: 2.5;
+  color: var(--color-primary-050);
+  transition: color .2s ease-in-out;
+}
+.search .clear-button::after {
+  content: "\F659";
+  color: transparent;
+}
+.search .clear-button.show {
+  cursor: pointer;
+}
+.search .clear-button.show:hover {
+  background: var(--color-primary-080);
+}
+.search .clear-button.show::before {
+  color: transparent;
+}
+.search .clear-button.show::after {
+  color: var(--color-primary-050);
+}
+.search .results-panel, .sidebar-nav.hide {
+  max-height: 0;
+}
+.search .results-panel {
+  padding: 1rem 0 0;
+  overflow: hidden;
+  transition: max-height .2s ease-in-out;
+}
+.search .results-panel.show {
+  max-height: 100rem;
+}
+.search .results-panel .empty {
+  text-align: center;
+}
+.search .matching-post a {
+  display: block;
+  margin: .25rem 0 0;
+  padding: .75rem;
+  color: inherit;
+  border-radius: .25rem;
+}
+.search .matching-post a:hover {
+  background: var(--color-primary-095);
+}
+.search .matching-post p {
+  margin: 0;
+  font-size: .875rem;
+  color: var(--color-neutral-030);
+}
+.search .matching-post h2 {
+  margin: 0 0 .5rem;
+  font-weight: 500;
+  line-height: 1;
+}
+.search-keyword {
+  background: var(--color-primary-090);
+  border-radius: .125rem;
+}
+
+.nav {
+  flex: 0 0 var(--r-width);
+  position: sticky;
+  top: 7rem;
+  width: var(--r-width);
+  height: max-content;
+}
+.nav a {
+  color: inherit;
+}
+
+.article-meta li {
+  margin: 0 0 .3125rem;
+}
+.article-meta a:hover::before {
+  color: var(--color-primary-060);
+}
+.edit::before {
+  content: "\F4C7";
+  display: inline-block;
+  width: 1.125rem;
+  font-size: 75%;
+}
+.play {
+  cursor: pointer;
+}
+.play::before {
+  content: "\F4F4";
+  display: inline-block;
+  margin: 0 .125rem 0 -.125rem;
+  width: 1.125rem;
+  line-height: 1;
+  vertical-align: -.125rem;
+}
+.play[data-status=play]::before {
+  content: "\F592";
+  animation: blink var(--animation-duration, 1.6s) ease-in-out infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.article-toc {
+  position: relative;
+  padding: 2.5rem 0 0;
+  transition: opacity .2s ease-in-out;
+}
+.article-toc::after {
+  content: "CONTENTS";
+  position: absolute;
+  top: .75rem;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--color-primary-050);
+}
+.article-toc:empty {
+  opacity: 0;
+}
+.article-toc [data-lv="3"] {
+  margin: 0 0 0 1rem;
+}
+.article-toc a {
+  display: inline-block;
+  margin: 0 0 .25rem;
+  padding: .125rem .5rem;
+  border-radius: .25rem;
+}
+.article-toc .active-parent a {
+  background: var(--color-primary-090);
+}
+.article-toc a:hover, .article-toc .active a:hover, .article-toc .active-parent a:hover {
+  background: var(--color-primary-080);
+}
+.article-toc::before {
+  content: "";
+  position: absolute;
+  margin: var(--toc-active-t) 0 0 var(--toc-active-l);
+  width: var(--toc-active-w);
+  height: 1.75rem;
+  background: var(--color-primary-090);
+  border-radius: .25rem;
+  z-index: -1;
+  transition: .2s ease-in-out;
+}

@@ -1,0 +1,29 @@
+
+- [Bookmark](bookmark.md)
+- <span>Operating System</span>
+  - [KMS 激活](system/kms-activation.md)
+  - [Windows 10 技巧](system/windows-10.md)
+- <span>Web Project</span>
+  - [HTML](web/html.md)
+  - [CSS](web/css.md)
+  - [JavaScript](web/javascript.md)
+  - [项目托管](web/hosting.md)
+- <span>Application</span>
+  - [7-Zip](application/7-zip.md)
+  - [Adobe Indesign](application/adobe-indesign.md)
+  - [Adobe Photoshop](application/adobe-photoshop.md)
+  - [Docsify](application/docsify.md)
+  - [Firefox](application/firefox.md)
+  - [Obsidian](application/obsidian.md)
+  - [Office](application/office.md)
+  - [OlivOs](application/olivos.md)
+  - [Typecho](application/typecho.md)
+  - [Typora](application/typora.md)
+  - [Vegas Pro](application/vegas-pro.md)
+  - [yt-dlp](application/yt-dlp.md)
+  - [坚果云](application/jianguoyun.md)
+- <span aria-expanded="false">Game</span>
+  - [Dragon Cave](game/drag-cave.md)
+  - [Karryn's Prison](game/karryns-prison.md)
+- <span>Life</span>
+  - [香薰石膏](life/plaster.md)

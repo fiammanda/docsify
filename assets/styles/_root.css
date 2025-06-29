@@ -1,0 +1,65 @@
+
+:root {
+  --ch: 250;
+  --csm:  1;
+  --cl010:  10%;
+  --cl020:  20%;
+  --cl030:  30%;
+  --cl050:  50%;
+  --cl060:  60%;
+  --cl070:  70%;
+  --cl080:  80%;
+  --cl090:  90%;
+  --cl095:  95%;
+  --cl100: 100%;
+  --color-neutral-010: hsl(250, calc(5% + 5% * var(--csm)), var(--cl010));
+  --color-neutral-020: hsl(250, calc(5% + 5% * var(--csm)), var(--cl020));
+  --color-neutral-030: hsl(250, 5%, var(--cl030));
+  --color-neutral-050: hsl(250, 5%, var(--cl050));
+  --color-neutral-060: hsl(250, 5%, var(--cl060));
+  --color-neutral-070: hsl(250, 5%, var(--cl070));
+  --color-neutral-080: hsl(250, 5%, var(--cl080));
+  --color-neutral-090: hsl(250, 5%, var(--cl090));
+  --color-neutral-095: hsl(250, 5%, var(--cl095));
+  --color-neutral-100: hsl(250, calc(5% - 5% * var(--csm)), var(--cl100));
+  --color-neutral-100-50: hsla(250, calc(5% - 5% * var(--csm)), var(--cl100), 50%);
+  --color-primary-050: hsl(var(--ch), calc(35% - 5% * var(--csm)), var(--cl050));
+  --color-primary-060: hsl(var(--ch), 40%, var(--cl060));
+  --color-primary-070: hsl(var(--ch), 30%, var(--cl070));
+  --color-primary-080: hsl(var(--ch), 30%, var(--cl080));
+  --color-primary-090: hsl(var(--ch), 30%, var(--cl090));
+  --color-primary-095: hsl(var(--ch), calc(17.5% + 2.5% * var(--csm)), var(--cl095));
+  --color-primary-050-25: hsla(var(--ch), 30%, var(--cl050), 25%);
+  --code-theme-comment    : #6e8090;
+  --code-theme-function   : #dd4a68;
+  --code-theme-keyword    : #66c;
+  --code-theme-operator   : #a67f59;
+  --code-theme-punctuation: #999;
+  --code-theme-selector   : #39c;
+  --code-theme-tag        : #939;
+  --code-theme-text       : #333;
+  --code-theme-variable   : #e90;
+  --l-width: 15rem;
+  --r-width: 12.5rem;
+  --toc-active-t: 0;
+  --toc-active-l: 0;
+  --toc-active-w: 0;
+  --font-feature: "ss01", "cv01", "cv06", "cv11";
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --csm: (-1);
+    --cl005: 95%;
+    --cl010: 90%;
+    --cl020: 85%;
+    --cl030: 80%;
+    --cl050: 70%;
+    --cl060: 60%;
+    --cl070: 50%;
+    --cl080: 40%;
+    --cl090: 25%;
+    --cl095: 15%;
+    --cl100: 10%;
+  }
+}
