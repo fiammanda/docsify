@@ -8,7 +8,7 @@
 }
 *::before, *::after {
   font-family: "Bootstrap", sans-serif;
-  transition: opacity 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
 
 ::selection {
