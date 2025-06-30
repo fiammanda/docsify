@@ -163,7 +163,7 @@ window.$docsify = {
         play.style.setProperty('--animation-duration', song[1] + 's');
         play.textContent = song[2];
         audio = new Audio('https://music.163.com/song/media/outer/url?id=' + song[0]);
-        audio.addEventListener('ended', () => {
+        audio.addEventListener('ended', (e) => {
           let next = random();
           song = song == next ? random() : next;
           play.style.setProperty('--animation-duration', song[1] + 's');
@@ -171,7 +171,8 @@ window.$docsify = {
           audio.src = 'https://music.163.com/song/media/outer/url?id=' + song[0];
           audio.play();
         });
-        play.addEventListener('click', () => {
+        play.addEventListener('click', (e) => {
+          e.stopPropagation();
           if (audio.paused) {
             audio.play();
             play.setAttribute('data-status', 'play');

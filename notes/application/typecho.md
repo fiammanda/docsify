@@ -7,7 +7,7 @@ https://app.infinityfree.net/
 - Parked Domain (Aliases)
 - `/hotdocs` 中新建` .htaccess` 并复制以下代码后，在设置—永久链接中启用地址重写功能
 
-  ```
+  ``` html
   <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
