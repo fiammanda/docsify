@@ -1,9 +1,9 @@
 code {
-  padding: 0 0.25rem;
+  padding: 0 .25rem;
   font-family: "JetBrains Mono", monospace;
-  font-size: 0.875rem;
+  font-size: .875rem;
   background: var(--color-primary-090);
-  border-radius: 0.125rem;
+  border-radius: .125rem;
   user-select: all;
 }
 pre[data-lang] {
@@ -16,7 +16,7 @@ pre[data-lang] {
   overflow: hidden;
   scrollbar-width: thin;
   background: var(--color-primary-095);
-  border-radius: 0.25rem;
+  border-radius: .25rem;
 }
 pre[data-lang] + pre[data-lang] {
   margin: 1.25rem 0 1rem;
@@ -24,7 +24,7 @@ pre[data-lang] + pre[data-lang] {
 pre[data-lang] code {
   flex: 1 0 100%;
   display: block;
-  padding: 1rem 1rem 0.875rem;
+  padding: 1rem 1rem .875rem;
   background: none;
   overflow: scroll auto;
   user-select: auto;
@@ -34,29 +34,27 @@ pre[data-lang] span[role] {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.75rem;
-  font-weight: 500;
+  padding: .5rem;
+  font: .75rem/1 "JetBrains Mono", monospace;
   text-transform: uppercase;
   color: var(--color-primary-050);
   background: var(--color-neutral-100-50);
-  border-radius: 0 0.25rem 0 0.25rem;
-  backdrop-filter: blur(0.5rem);
-  transition: 0.2s ease-in-out;
+  border-radius: 0 .25rem;
+  backdrop-filter: blur(.5rem);
+  transition: .2s ease-in-out;
   transition-property: background, color;
   cursor: pointer;
 }
 pre[data-lang] span[role]::before,
 pre[data-lang] span[role]::after {
-  content: "\F290";
+  content: "content_paste";
   position: absolute;
-  bottom: 0.125rem;
-  color: var(--color-neutral-020);
+  font: .875rem/1 "Material Symbols Rounded";
+  color: var(--color-primary-050);
   opacity: 0;
-  transition: opacity 0.2s ease-in-out;
 }
 pre[data-lang] span[role]::after {
-  content: "\F28B";
+  content: "inventory";
 }
 pre[data-lang] span[role]:hover,
 pre[data-lang].copied span[role] {
@@ -71,7 +69,7 @@ pre[data-lang].copied span[role]::before {
 }
 
 .namespace {
-  opacity: 0.75;
+  opacity: .75;
 }
 .token.comment,
 .token.prolog,

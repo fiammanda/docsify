@@ -9,7 +9,7 @@ Home is where you hang your enemies' heads!
   - Switch `routerMode` to `history`.
   - Adjust fonts and color scheme.
   - Add page transition.
-  - Add some new songs ♫.
+  - Add some new songs ♫
 
 - `2022-11-08`
   - Switch to Glitch for easier modification.

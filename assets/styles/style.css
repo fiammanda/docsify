@@ -7,8 +7,8 @@
   box-sizing: border-box;
 }
 *::before, *::after {
-  font-family: "Bootstrap", sans-serif;
-  transition: color 0.2s ease-in-out;
+  transition: .2s ease-in-out;
+  transition-property: color, opacity;
 }
 
 ::selection {
@@ -34,13 +34,13 @@ body {
   color: var(--color-neutral-020);
   background: var(--color-neutral-100);
   overflow: auto scroll;
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity .2s ease-in-out;
 }
 
 a {
   color: var(--color-primary-050);
   text-decoration: none;
-  transition: 0.2s ease-in-out;
+  transition: .2s ease-in-out;
   transition-property: background, color;
 }
 a:hover {
@@ -59,7 +59,7 @@ del {
 input {
   outline: none;
   border: none;
-  padding: 0.5rem 0.75rem;
+  padding: .5rem .75rem;
   font: 1rem/1.5 "Inter", -apple-system, "MiSans", "HarmonyOS Sans", "Source Han Sans SC", "Noto Sans CJK SC", "思源黑体", "Noto Sans SC", sans-serif;
   color: var(--color-neutral-020);
   appearance: none;
@@ -83,10 +83,10 @@ table {
   margin: 1rem 0 1.5rem;
   width: 100%;
   border-collapse: collapse;
-  font-size: 0.875rem;
+  font-size: .875rem;
 }
 th, td {
-  padding: 0.25rem 0;
+  padding: .25rem 0;
   border-bottom: 1px solid var(--color-neutral-090);
 }
 th {
@@ -113,7 +113,7 @@ th {
 }
 
 .content {
-  transition: opacity 0.2s ease-in-out;
+  transition: opacity .2s ease-in-out;
 }
 
 .content .anchor {
@@ -151,12 +151,12 @@ th {
   padding: 0 0 0 1rem;
 }
 .content ul li::before {
-  content: "\F285";
+  content: "arrow_forward_ios";
   display: inline-block;
   margin: 0 0 0 -1rem;
   width: 1rem;
-  font-size: 0.75rem;
-  font-weight: 900;
+  font: .875rem/1rem "Material Symbols Rounded";
+  vertical-align: -12%;
   color: var(--color-primary-060);
 }
 .content li label input + p,
@@ -164,16 +164,18 @@ th {
   margin-top: -1.75rem;
 }
 .content blockquote {
+  position: relative;
   margin: 1rem 0;
   padding: 1rem;
   background: var(--color-primary-090);
-  border-radius: 0.25rem;
+  border-radius: .25rem;
 }
 .content blockquote::before {
-  content: "”";
+  content: "format_quote";
   position: absolute;
-  margin: -1rem 0 0 calc(100% - 4.5rem);
-  font-size: 2rem;
+  top: .5rem;
+  right: .5rem;
+  font: 1.5rem/1 "Material Symbols Rounded";
   color: var(--color-primary-070);
   pointer-events: none;
 }
@@ -204,13 +206,13 @@ th {
   color: var(--color-primary-070);
 }
 .content .task-list-item label::before {
-  content: "\F584";
-  margin: 0 0 0 -1rem;
-  font-size: 0.75rem;
+  content: "check_box_outline_blank";
+  font: 1rem/1 "Material Symbols Rounded";
+  vertical-align: -16%;
   color: var(--color-primary-060);
 }
 .content .task-list-item label.checked::before {
-  content: "\F26C";
+  content: "check_box";
   color: var(--color-primary-070);
 }
 
@@ -237,9 +239,10 @@ th {
 }
 
 @font-face {
+  font-family: "Material Symbols Rounded";
+  font-style: normal;
   font-display: block;
-  font-family: "Bootstrap";
-  src: url("https://npm.elemecdn.com/bootstrap-icons/font/fonts/bootstrap-icons.woff2") format("woff2");
+  src: url("https://fonts.gstatic.com/s/materialsymbolsrounded/v255/syl0-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvDmUSVOK7BDB_Qb9vUSzq3wzLK-P0J-V_Zs-QtQth3-jOcbTCVpeRL2w5rwZu2rIelXxc.woff2") format("woff2");
 }
 @font-face {
   font-family: "JetBrains Mono";

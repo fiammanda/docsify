@@ -2,7 +2,7 @@
 
 - 解决色差
 
-  「Video FX」 🡢 「Levels」 🡢 「Computer RGB to Studio RGB」
+  「Video FX」 → 「Levels」 → 「Computer RGB to Studio RGB」
 
 - 无法打开
 

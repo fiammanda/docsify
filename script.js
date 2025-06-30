@@ -128,8 +128,33 @@ window.$docsify = {
           }
         });
         document.querySelector('.sidebar').addEventListener('click', (e) => {
-          if (!e.target.closest('a')) {
+          const a = e.target.closest('a');
+          if (a && !a.classList.contains('available')) {
+            e.preventDefault();
             e.stopPropagation();
+            a.classList.add('available');
+            document.querySelector('.content').classList.add('transparent');
+            document.querySelector('.article-toc').classList.add('transparent');
+            document.querySelector('.sidebar').classList.add('unavailable');
+            setTimeout(() => {
+              a.click();
+            }, 200);
+          } else if (!a) {
+            e.stopPropagation();
+          }
+        });
+        document.querySelector('[rel="home"]').addEventListener('click', (e) => {
+          const a = e.target;
+          if (!a.classList.contains('available')) {
+            e.preventDefault();
+            e.stopPropagation();
+            a.classList.add('available');
+            document.querySelector('.content').classList.add('transparent');
+            document.querySelector('.article-toc').classList.add('transparent');
+            setTimeout(() => {
+              a.click();
+              a.classList.remove('available');
+            }, 200);
           }
         });
 
@@ -157,16 +182,7 @@ window.$docsify = {
         });
       });
 
-      hook.beforeEach((content, next) => {
-        document.querySelector('.content').classList.add('transparent');
-        document.querySelector('.article-toc').classList.add('transparent');
-        setTimeout(() => {
-          next(content);
-        }, 200);
-      });
-
       hook.afterEach((html) => {
-        document.querySelector('.content').classList.remove('transparent');
         let toc = '';
         let headings = html.match(/<h[23] id=.+?<\/h[23]>/g);
         if (headings && vm.route.file.slice(1) != $docsify.homepage) {
@@ -178,7 +194,13 @@ window.$docsify = {
         }
         document.querySelector('.article-toc').innerHTML = toc;
         document.querySelector('.article-toc').classList.remove('transparent');
-        return html.replace(/label><input checked/g, 'label class="checked"><input checked');
+        document.querySelector('.content').classList.remove('transparent');
+        setTimeout(() => {
+          document.querySelector('.sidebar').classList.remove('unavailable');
+        }, 1);
+        return html
+          .replace(/label><input checked/g, 'label class="checked"><input checked')
+          .replace(/<input.+?"checkbox"> /g, '');
       });
 
       hook.doneEach(() => {

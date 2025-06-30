@@ -91,6 +91,8 @@
     z-index: 9;
   }
   .sidebar-toggle::before {
-    content: "\F479";
+    content: "dehaze";
+    font-family: "Material Symbols Rounded";
+    vertical-align: -8%;
   }
 }

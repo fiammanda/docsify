@@ -35,7 +35,7 @@ main {
   flex: 0 0 var(--r-width);
   width: var(--r-width);
   font-weight: 500;
-  color: var(--color-primary-060);
+  color: var(--color-primary-070);
 }
 
 .content {
@@ -96,20 +96,13 @@ main {
 }
 .sidebar-nav .active > a {
   pointer-events: none;
-}
-.sidebar-nav li[class] > a {
   background: var(--color-primary-090);
 }
-.sidebar-nav a[rel=home] {
-  display: inline-block;
-  margin: 0 0 1rem;
+.unavailable {
+  pointer-events: none;
 }
-.sidebar-nav a[rel=home]::before {
-  content: "\F424";
-}
-.sidebar-nav a[rel=home]:hover, .sidebar-nav .active > a[rel=home] {
-  color: var(--color-primary-060);
-  background: none;
+.unavailable .active > a {
+  background: transparent;
 }
 
 .search {
@@ -146,15 +139,16 @@ main {
   display: none;
 }
 .search .clear-button::before, .search .clear-button::after {
-  content: "\F52A";
+  content: "search";
   position: absolute;
   margin: 1px 0 -1px;
+  font-family: "Material Symbols Rounded";
   line-height: 2.5;
   color: var(--color-primary-050);
   transition: color .2s ease-in-out;
 }
 .search .clear-button::after {
-  content: "\F659";
+  content: "close";
   color: transparent;
 }
 .search .clear-button.show {
@@ -208,6 +202,7 @@ main {
   border-radius: .125rem;
 }
 
+
 .nav {
   flex: 0 0 var(--r-width);
   position: sticky;
@@ -226,24 +221,24 @@ main {
   color: var(--color-primary-060);
 }
 .edit::before {
-  content: "\F4C7";
+  content: "edit";
   display: inline-block;
-  width: 1.125rem;
-  font-size: 75%;
+  width: 1.25rem;
+  font-family: "Material Symbols Rounded";
+  vertical-align: -8%;
 }
 .play {
   cursor: pointer;
 }
 .play::before {
-  content: "\F4F4";
+  content: "music_off";
   display: inline-block;
-  margin: 0 .125rem 0 -.125rem;
-  width: 1.125rem;
-  line-height: 1;
-  vertical-align: -.125rem;
+  width: 1.25rem;
+  font-family: "Material Symbols Rounded";
+  vertical-align: -8%;
 }
 .play[data-status=play]::before {
-  content: "\F592";
+  content: "music_note";
   animation: blink var(--animation-duration, 1.6s) ease-in-out infinite;
 }
 @keyframes blink {
