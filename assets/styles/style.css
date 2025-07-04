@@ -1,7 +1,7 @@
-@import url("_layout-pc.css");
-@import url("_layout-mobile.css");
 @import url("_root.css");
 @import url("_code.css");
+@import url("_layout.css");
+@import url("_layout-mobile.css");
 
 * {
   box-sizing: border-box;
@@ -29,11 +29,10 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font: 1rem/1.75 "Inter", -apple-system, "MiSans", "HarmonyOS Sans", "Source Han Sans SC", "Noto Sans CJK SC", "思源黑体", "Noto Sans SC", sans-serif;
+  font: 1rem/1.75 -apple-system, "MiSans", "HarmonyOS Sans", "Source Han Sans SC", "Noto Sans CJK SC", "思源黑体", "Noto Sans SC", sans-serif;
   font-feature-settings: var(--font-feature);
   color: var(--color-neutral-020);
   background: var(--color-neutral-100);
-  overflow: auto scroll;
   transition: opacity .2s ease-in-out;
 }
 
@@ -97,28 +96,6 @@ th {
 
 .transparent {
   opacity: 0;
-}
-
-.header {
-  user-select: none;
-}
-.header .site-name {
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
-.sidebar, .nav {
-  line-height: 1.5;
-  user-select: none;
-}
-
-.content {
-  transition: opacity .2s ease-in-out;
-}
-
-.content .anchor {
-  color: var(--color-neutral-020);
-  pointer-events: none;
 }
 
 .content p {
@@ -236,18 +213,4 @@ th {
 
 .responsive-wrap iframe {
   max-width: 100%;
-}
-
-@font-face {
-  font-family: "Material Symbols Rounded";
-  font-style: normal;
-  font-display: block;
-  src: url("https://fonts.gstatic.com/s/materialsymbolsrounded/v255/syl0-zNym6YjUruM-QrEh7-nyTnjDwKNJ_190FjpZIvDmUSVOK7BDB_Qb9vUSzq3wzLK-P0J-V_Zs-QtQth3-jOcbTCVpeRL2w5rwZu2rIelXxc.woff2") format("woff2");
-}
-@font-face {
-  font-family: "JetBrains Mono";
-  font-style: normal;
-  font-weight: 400;
-  src: url("https://fonts.gstatic.com/s/jetbrainsmono/v23/tDbY2o-flEEny0FZhsfKu5WU4zr3E_BX0PnT8RD8yKxTOlOV.woff2") format("woff2");
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
