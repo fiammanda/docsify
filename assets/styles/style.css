@@ -29,7 +29,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  font: 1rem/1.75 -apple-system, "MiSans", "HarmonyOS Sans", "Source Han Sans SC", "Noto Sans CJK SC", "思源黑体", "Noto Sans SC", sans-serif;
+  font: 1rem/1.75 "Inter", -apple-system, "MiSans", "HarmonyOS Sans", "Source Han Sans SC", "Noto Sans CJK SC", "思源黑体", "Noto Sans SC", sans-serif;
   font-feature-settings: var(--font-feature);
   color: var(--color-neutral-020);
   background: var(--color-neutral-100);
